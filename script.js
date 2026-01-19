@@ -49,7 +49,7 @@ function initNavigation() {
    ===================================================== */
 function initScrollHeader() {
     const header = document.getElementById('header');
-    
+
     const handleScroll = () => {
         if (window.scrollY > 100) {
             header?.classList.add('scrolled');
@@ -74,20 +74,20 @@ function initParticles() {
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
-        
+
         // Random position
         particle.style.left = Math.random() * 100 + '%';
         particle.style.top = Math.random() * 100 + '%';
-        
+
         // Random size
         const size = Math.random() * 4 + 2;
         particle.style.width = size + 'px';
         particle.style.height = size + 'px';
-        
+
         // Random animation delay and duration
         particle.style.animationDelay = Math.random() * 15 + 's';
         particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-        
+
         particlesContainer.appendChild(particle);
     }
 }
@@ -97,7 +97,7 @@ function initParticles() {
    ===================================================== */
 function initRevealAnimations() {
     const reveals = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
-    
+
     const revealOnScroll = () => {
         reveals.forEach(element => {
             const windowHeight = window.innerHeight;
@@ -119,7 +119,7 @@ function initRevealAnimations() {
    ===================================================== */
 function initCounterAnimations() {
     const counters = document.querySelectorAll('.stat-number');
-    
+
     const animateCounter = (counter) => {
         const target = parseInt(counter.dataset.count);
         const duration = 2000;
@@ -152,38 +152,89 @@ function initCounterAnimations() {
 }
 
 /* =====================================================
-   CONTACT FORM
+   CONTACT FORM - Formspree Integration
    ===================================================== */
 function initContactForm() {
     const form = document.getElementById('contact-form');
-    
+
     form?.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
-        
+
         // Show loading state
         submitBtn.textContent = 'Enviando...';
         submitBtn.disabled = true;
-        
-        // Simulate form submission (replace with actual API call)
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        
-        // Show success message
-        submitBtn.textContent = '¡Mensaje Enviado!';
-        submitBtn.style.background = 'linear-gradient(135deg, #7CB342 0%, #5A8A2A 100%)';
-        
-        // Reset form
-        form.reset();
-        
+
+        try {
+            const formData = new FormData(form);
+
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Show success message
+                submitBtn.textContent = '¡Mensaje Enviado!';
+                submitBtn.style.background = 'linear-gradient(135deg, #7CB342 0%, #5A8A2A 100%)';
+                form.reset();
+
+                // Show success alert
+                showFormAlert('¡Gracias! Tu mensaje ha sido enviado. Te responderemos pronto.', 'success');
+            } else {
+                throw new Error('Error en el envío');
+            }
+        } catch (error) {
+            // Show error message
+            submitBtn.textContent = 'Error al enviar';
+            submitBtn.style.background = 'linear-gradient(135deg, #e53935 0%, #c62828 100%)';
+            showFormAlert('Hubo un problema al enviar el mensaje. Por favor intenta de nuevo o contáctanos por WhatsApp.', 'error');
+        }
+
         // Reset button after delay
         setTimeout(() => {
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
             submitBtn.style.background = '';
-        }, 3000);
+        }, 4000);
     });
+}
+
+// Helper function to show form alerts
+function showFormAlert(message, type) {
+    // Remove existing alerts
+    const existingAlert = document.querySelector('.form-alert');
+    if (existingAlert) existingAlert.remove();
+
+    const alert = document.createElement('div');
+    alert.className = `form-alert form-alert-${type}`;
+    alert.style.cssText = `
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        font-weight: 500;
+        animation: fadeUp 0.3s ease;
+        ${type === 'success'
+            ? 'background: rgba(124, 179, 66, 0.1); color: #7CB342; border: 1px solid #7CB342;'
+            : 'background: rgba(229, 57, 53, 0.1); color: #e53935; border: 1px solid #e53935;'}
+    `;
+    alert.textContent = message;
+
+    const form = document.getElementById('contact-form');
+    form.parentNode.insertBefore(alert, form.nextSibling);
+
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+        alert.style.opacity = '0';
+        alert.style.transition = 'opacity 0.3s ease';
+        setTimeout(() => alert.remove(), 300);
+    }, 5000);
 }
 
 /* =====================================================
@@ -191,10 +242,10 @@ function initContactForm() {
    ===================================================== */
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
-            
+
             if (target) {
                 const headerOffset = 80;
                 const elementPosition = target.getBoundingClientRect().top;
@@ -214,7 +265,7 @@ function initSmoothScroll() {
    ===================================================== */
 function initParallax() {
     const heroImage = document.querySelector('.hero-image');
-    
+
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
         if (heroImage && scrolled < window.innerHeight) {
@@ -229,7 +280,7 @@ function initParallax() {
 function initTypingAnimation() {
     const text = document.querySelector('.hero-title');
     if (!text) return;
-    
+
     // Add typing effect if needed
 }
 
