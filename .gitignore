@@ -1,0 +1,35 @@
+# ══════════════════════════════════════════
+# IZZY Corporation — .gitignore
+# ══════════════════════════════════════════
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ──────────────────────────────────────────
+# izzybot — WhatsApp bot (separate project)
+# Contains sensitive credentials & secrets
+# ──────────────────────────────────────────
+izzybot/
+
+# ──────────────────────────────────────────
+# Dev-only conversion scripts (not needed in the deployed site)
+# ──────────────────────────────────────────
+convert_sharp.js
+convert_webp.js
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node.js (if ever added to root)
+node_modules/
+npm-debug.log*
+
+# Environment files (never commit secrets)
+.env
+.env.local
+.env.*

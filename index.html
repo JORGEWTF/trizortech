@@ -1,129 +1,204 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <!-- Content Security Policy (Prevents XSS and unauthorized scripts) -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://opencollective.com; frame-src 'self' https://www.google.com/maps/; font-src 'self'; connect-src 'self' https:; object-src 'none'; base-uri 'self';">
+
+    <!-- SEO Primary Meta Tags -->
+    <title>IZZY Corporation | Tecnología, IA y Automatización para Empresas en Bolivia</title>
+    <meta name="title" content="IZZY Corporation | Tecnología, IA y Automatización para Empresas en Bolivia">
     <meta name="description"
-        content="Trizor Tech - Tu socio tecnológico en Bolivia. Software a medida, automatización y soluciones fintech para medianas empresas.">
-    <meta name="keywords" content="software, tecnología, Bolivia, fintech, automatización, desarrollo, Cochabamba">
-    <title>Trizor Tech | Soluciones Tecnológicas para tu Empresa</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+        content="IZZY Corporation diseña infraestructuras de inteligencia artificial, automatizaciones con n8n, landing pages de alta conversión, e-commerce, hosting VPS y agentes IA en Bolivia y Latinoamérica.">
+    <meta name="keywords"
+        content="IZZY Corporation, Easy Corporation, inteligencia artificial Bolivia, automatización n8n, landing pages, e-commerce, hosting VPS, agentes IA, desarrollo web Bolivia, tecnología empresarial, La Paz Bolivia">
+    <meta name="author" content="IZZY Corporation">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://izzycorporation.com">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://izzycorporation.com">
+    <meta property="og:title" content="IZZY Corporation | Tecnología, IA y Automatización para Empresas">
+    <meta property="og:description"
+        content="Diseñamos infraestructuras de inteligencia artificial, automatizaciones avanzadas y experiencias web inmersivas.">
+    <meta property="og:image" content="https://izzycorporation.com/logo.png">
+    <meta property="og:site_name" content="IZZY Corporation">
+    <meta property="og:locale" content="es_BO">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://izzycorporation.com">
+    <meta property="twitter:title" content="IZZY Corporation | Tecnología, IA y Automatización">
+    <meta property="twitter:description"
+        content="Diseñamos infraestructuras de inteligencia artificial, automatizaciones avanzadas y experiencias web inmersivas.">
+    <meta property="twitter:site" content="@IZZYCorporation">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "IZZY Corporation",
+      "alternateName": ["Easy Corporation", "IZZY Corp"],
+      "url": "https://izzycorporation.com/"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "IZZY Corporation",
+      "url": "https://izzycorporation.com",
+      "logo": "https://izzycorporation.com/logo.png",
+      "image": "https://izzycorporation.com/logo.png",
+      "description": "Diseñamos infraestructuras de inteligencia artificial, automatizaciones avanzadas y experiencias web inmersivas.",
+      "email": "izzycorporation.sa@gmail.com",
+      "telephone": "+59168490383",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "La Paz",
+        "addressCountry": "BO"
+      },
+      "founder": [
+        { "@type": "Person", "name": "Jorge Jair Condori Requena", "jobTitle": "CEO" },
+        { "@type": "Person", "name": "Jhanina Suarez Soliz", "jobTitle": "CTO" },
+        { "@type": "Person", "name": "Uziel Ticona Ledezma", "jobTitle": "COO" }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61588488814288",
+        "https://www.instagram.com/izzycorporation/",
+        "https://x.com/IZZYCorporation",
+        "https://www.tiktok.com/@izzycorp"
+      ]
+    }
+  ]
+  </script>
 </head>
 
 <body>
-    <!-- Header / Navigation -->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#hero" class="nav-logo">
-                <img src="logo.png" alt="Trizor Tech Logo" class="logo-img">
+
+    <!-- ═══════════════ NAVBAR ═══════════════ -->
+    <nav class="navbar" id="navbar" aria-label="Navegación principal">
+        <div class="container">
+            <a href="#hero" class="nav-logo" aria-label="IZZY Corporation - Inicio">
+                <img src="logo.png" alt="IZZY Corporation Logo" width="40" height="40">
+                <span>IZZY Corporation</span>
             </a>
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item"><a href="#hero" class="nav-link">Inicio</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">Quiénes Somos</a></li>
-                <li class="nav-item"><a href="#services" class="nav-link">Servicios</a></li>
-                <li class="nav-item"><a href="#mission" class="nav-link">Misión y Visión</a></li>
-                <li class="nav-item"><a href="#team" class="nav-link">Equipo</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
-            </ul>
-            <button class="nav-toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-bg">
-            <div class="hero-gradient"></div>
-            <div class="hero-particles" id="particles"></div>
+            <div class="nav-links" id="nav-links">
+                <a href="#mision">Misión</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema claro/oscuro">
+                    <span class="icon-sun">☀️</span>
+                    <span class="icon-moon">🌙</span>
+                </button>
+                <a href="#contacto" class="btn-primary btn-nav-cta">Hablemos</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
-        <div class="container hero-content">
-            <div class="hero-text">
-                <span class="hero-badge animate-fade-up">🚀 Transformación Digital</span>
-                <h1 class="hero-title animate-fade-up delay-1">
-                    Impulsamos el <span class="gradient-text">crecimiento</span> de tu empresa
+    </nav>
+
+    <!-- ═══════════════ HERO (Scroll-Driven Frame Animation) ═══════════════ -->
+    <div class="hero-scroll-container" id="hero-scroll-container">
+        <section class="hero" id="hero">
+            <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+
+            <div class="hero-content hero-text-overlay" id="hero-text-overlay">
+                <div class="hero-logo">
+                    <img src="logo.png" alt="IZZY Corporation">
+                </div>
+
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    Innovación Tecnológica
+                </div>
+
+                <h1>
+                    Tecnología <span class="highlight">Imparable</span><br>
+                    para Tu Empresa
                 </h1>
-                <p class="hero-subtitle animate-fade-up delay-2">
-                    Somos tu socio tecnológico estratégico en Bolivia. Software a medida, automatización y soluciones
-                    fintech que transforman la manera en que haces negocios.
+
+                <p>
+                    Diseñamos infraestructuras de inteligencia artificial, automatizaciones avanzadas
+                    y experiencias web inmersivas que impulsan la evolución de tu negocio.
                 </p>
-                <div class="hero-buttons animate-fade-up delay-3">
-                    <a href="#contact" class="btn btn-primary">Contáctanos</a>
-                    <a href="#services" class="btn btn-secondary">Ver Servicios</a>
-                </div>
-            </div>
-            <div class="hero-image animate-fade-left delay-2">
-                <img src="team_coding.png" alt="Equipo Trizor Tech trabajando">
-                <div class="hero-image-glow"></div>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <span>Descubre más</span>
-            <div class="scroll-indicator"></div>
-        </div>
-    </section>
 
-    <!-- Announcement Banner -->
-    <section class="announcement">
-        <div class="container">
-            <div class="announcement-content">
-                <div class="announcement-icon">📢</div>
-                <div class="announcement-text">
-                    <h3>Mejora la administración de tu negocio</h3>
-                    <p>Agiliza el crecimiento de tu empresa con nuestras soluciones tecnológicas y la confianza que
-                        brindamos.</p>
+                <div class="hero-buttons">
+                    <a href="#servicios" class="btn-primary">
+                        Explorar Servicios
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                    <a href="#contacto" class="btn-outline">
+                        Contáctanos
+                    </a>
                 </div>
-                <a href="#contact" class="btn btn-white">Saber más</a>
             </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section class="about section" id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Sobre Nosotros</span>
-                <h2 class="section-title">¿Quiénes Somos?</h2>
-                <p class="section-subtitle">Conoce a Trizor Tech, tu aliado tecnológico en Bolivia</p>
+            <div class="scroll-indicator" id="scroll-indicator" aria-hidden="true">
+                <div class="mouse"></div>
+                <span>Scroll</span>
             </div>
-            <div class="about-content">
-                <div class="about-image reveal-left">
-                    <img src="business_meeting.png" alt="Reunión de negocios Trizor Tech">
-                    <div class="about-image-decoration"></div>
+        </section>
+    </div>
+
+    <!-- ═══════════════ MISSION ═══════════════ -->
+    <section class="mission section-padding" id="mision">
+        <div class="container">
+            <div class="mission-grid">
+                <div class="mission-content">
+                    <span class="section-label reveal">Nuestra Misión</span>
+                    <h2 class="section-title reveal">
+                        El Motor Tecnológico <span class="gradient-text">Invisible</span> de Tu Éxito
+                    </h2>
+                    <p class="mission-text reveal">
+                        Ser el motor tecnológico invisible que impulsa la evolución de las empresas.
+                        En IZZY CORPORATION, diseñamos y orquestamos infraestructuras de inteligencia
+                        artificial, automatizaciones avanzadas y experiencias web inmersivas que permiten
+                        a nuestros clientes enfocarse en su propósito, con la certeza de que su tecnología
+                        es imparable, eficiente y siempre vanguardista.
+                    </p>
+
                 </div>
-                <div class="about-text reveal-right">
-                    <h3>Tu Socio Tecnológico de Confianza</h3>
-                    <p>
-                        <strong>Trizor Tech</strong> es una empresa boliviana dedicada a brindar soluciones tecnológicas
-                        integrales para medianas empresas. Entendemos los desafíos únicos que enfrentan los negocios en
-                        nuestra región y trabajamos incansablemente para ofrecer herramientas que impulsen su
-                        crecimiento.
-                    </p>
-                    <p>
-                        Desde software a medida hasta soluciones fintech avanzadas, nuestro equipo de expertos combina
-                        innovación técnica con un profundo conocimiento del mercado boliviano para entregar resultados
-                        excepcionales.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number" data-count="50">0</span>
-                            <span class="stat-label">Clientes Satisfechos</span>
+
+                <div class="mission-visual reveal-scale">
+                    <div class="mission-graphic">
+                        <div class="orbit-ring">
+                            <div class="orbit-dot"></div>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number" data-count="100">0</span>
-                            <span class="stat-label">Proyectos Completados</span>
+                        <div class="orbit-ring">
+                            <div class="orbit-dot"></div>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number" data-count="24">0</span>
-                            <span class="stat-label">Soporte 24/7</span>
+                        <div class="orbit-ring">
+                            <div class="orbit-dot"></div>
+                        </div>
+                        <div class="orbit-center">
+                            <img src="logo.png" alt="IZZY Corp">
                         </div>
                     </div>
                 </div>
@@ -131,398 +206,397 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services section" id="services">
+    <!-- ═══════════════ SERVICES ═══════════════ -->
+    <section class="services section-padding" id="servicios">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Nuestros Servicios</span>
-                <h2 class="section-title">Soluciones para tu Empresa</h2>
-                <p class="section-subtitle">Ofrecemos servicios tecnológicos de primer nivel</p>
+            <div class="services-header">
+                <span class="section-label reveal">Nuestros Servicios</span>
+                <h2 class="section-title reveal">
+                    Soluciones que <span class="gradient-text">Transforman</span>
+                </h2>
+                <p class="section-subtitle reveal">
+                    Desde landing pages de alta conversión hasta ecosistemas completos de inteligencia artificial y
+                    automatización.
+                </p>
             </div>
-            <div class="services-grid">
-                <article class="service-card reveal-up">
+
+            <div class="services-grid stagger">
+                <!-- Service 1: Landing Pages -->
+                <div class="service-card reveal">
                     <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <path d="M3 9h18" />
+                            <path d="M9 21V9" />
                         </svg>
                     </div>
-                    <h3>Software a Medida</h3>
-                    <p>Desarrollamos aplicaciones personalizadas que se adaptan perfectamente a las necesidades
-                        específicas de tu negocio.</p>
-                </article>
-                <article class="service-card reveal-up delay-1">
+                    <h3>Landing Pages</h3>
+                    <p class="description">Experiencias web inmersivas con animaciones fluidas, optimizadas para
+                        velocidad, SEO y conversión.</p>
+                    <button class="btn-service" data-service="Landing Pages de Alta Conversión">
+                        Solicitar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Service 2: E-commerce -->
+                <div class="service-card reveal">
                     <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="3" />
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="8" cy="21" r="1" />
+                            <circle cx="19" cy="21" r="1" />
                             <path
-                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                        </svg>
+                    </div>
+                    <h3>E-commerce</h3>
+                    <p class="description">Tiendas virtuales robustas con pagos seguros, sincronización de stock y
+                        notificaciones en tiempo real.</p>
+                    <button class="btn-service" data-service="E-commerce y Tiendas Virtuales">
+                        Solicitar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Service 3: Automatización -->
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v4" />
+                            <path d="m16.2 7.8 2.9-2.9" />
+                            <path d="M18 12h4" />
+                            <path d="m16.2 16.2 2.9 2.9" />
+                            <path d="M12 18v4" />
+                            <path d="m4.9 19.1 2.9-2.9" />
+                            <path d="M2 12h4" />
+                            <path d="m4.9 4.9 2.9 2.9" />
                         </svg>
                     </div>
                     <h3>Automatización</h3>
-                    <p>Optimiza tus procesos empresariales con soluciones de automatización que ahorran tiempo y reducen
-                        errores.</p>
-                </article>
-                <article class="service-card reveal-up delay-2">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                            <path d="M8 21h8M12 17v4" />
+                    <p class="description">Flujos de trabajo inteligentes con n8n que conectan tu CRM, calendarios,
+                        correos y bases de datos.</p>
+                    <button class="btn-service" data-service="Automatización de Procesos">
+                        Solicitar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
-                    </div>
-                    <h3>Soluciones Fintech</h3>
-                    <p>Implementamos tecnología financiera de vanguardia para modernizar tus operaciones bancarias y de
-                        pagos.</p>
-                </article>
-                <article class="service-card reveal-up delay-3">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path
-                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                            <path
-                                d="M7.5 4.21l4.5 2.6 4.5-2.6M7.5 19.79V14.6L3 12M21 12l-4.5 2.6v5.19M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12" />
-                        </svg>
-                    </div>
-                    <h3>Infraestructura Cloud</h3>
-                    <p>Migramos y gestionamos tu infraestructura en la nube con las mejores prácticas de seguridad y
-                        rendimiento.</p>
-                </article>
-                <article class="service-card reveal-up delay-4">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                        </svg>
-                    </div>
-                    <h3>Ciberseguridad</h3>
-                    <p>Protegemos tu empresa con soluciones avanzadas de seguridad informática y protección de datos.
-                    </p>
-                </article>
-                <article class="service-card reveal-up delay-5">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                            <circle cx="9" cy="7" r="4" />
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
-                        </svg>
-                    </div>
-                    <h3>Consultoría IT</h3>
-                    <p>Te asesoramos en la toma de decisiones tecnológicas estratégicas para maximizar el ROI de tu
-                        inversión.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mission, Vision & Values -->
-    <section class="mission section" id="mission">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Nuestra Filosofía</span>
-                <h2 class="section-title">Misión, Visión y Valores</h2>
-                <p class="section-subtitle">Los principios que guían nuestro trabajo</p>
-            </div>
-            <div class="mission-grid">
-                <div class="mission-card mission-card-large reveal-up">
-                    <div class="mission-card-icon">🎯</div>
-                    <h3>Nuestra Misión</h3>
-                    <p>Somos el socio tecnológico de las medianas empresas en Bolivia, impulsando su crecimiento con
-                        software a medida, automatización y soluciones fintech.</p>
+                    </button>
                 </div>
-                <div class="mission-card mission-card-large reveal-up delay-1">
-                    <div class="mission-card-icon">🔭</div>
-                    <h3>Nuestra Visión</h3>
-                    <p>Ser el referente indiscutible de modernización empresarial en Bolivia, potenciando a las medianas
-                        empresas con soluciones tecnológicas integrales —desde infraestructura hasta aplicaciones— que
-                        se conviertan en el motor de su crecimiento.</p>
-                </div>
-            </div>
 
-            <div class="values-section">
-                <h3 class="values-title">Nuestros Valores</h3>
-                <div class="values-grid">
-                    <div class="value-card reveal-up">
-                        <div class="value-icon">💡</div>
-                        <h4>Innovación con Propósito</h4>
-                        <p>Cada solución que creamos tiene un objetivo claro: generar valor real para tu negocio.</p>
+                <!-- Service 4: IA -->
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 8V4H8" />
+                            <rect width="16" height="12" x="4" y="8" rx="2" />
+                            <path d="M2 14h2" />
+                            <path d="M20 14h2" />
+                            <path d="M15 13v2" />
+                            <path d="M9 13v2" />
+                        </svg>
                     </div>
-                    <div class="value-card reveal-up delay-1">
-                        <div class="value-icon">🔍</div>
-                        <h4>Transparencia Total</h4>
-                        <p>Comunicación abierta y honesta en cada etapa del proyecto. Sin sorpresas.</p>
+                    <h3>Inteligencia Artificial</h3>
+                    <p class="description">Agentes IA personalizados que atienden clientes, califican leads y agendan
+                        citas automáticamente.</p>
+                    <button class="btn-service" data-service="Inteligencia Artificial y Agentes Conversacionales">
+                        Solicitar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Service 5: Hosting -->
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="8" x="2" y="2" rx="2" />
+                            <rect width="20" height="8" x="2" y="14" rx="2" />
+                            <line x1="6" x2="6.01" y1="6" y2="6" />
+                            <line x1="6" x2="6.01" y1="18" y2="18" />
+                        </svg>
                     </div>
-                    <div class="value-card reveal-up delay-2">
-                        <div class="value-icon">🤝</div>
-                        <h4>Empatía con el Negocio</h4>
-                        <p>Entendemos tus desafíos porque nos ponemos en tu lugar y trabajamos como parte de tu equipo.
-                        </p>
+                    <h3>Hosting VPS</h3>
+                    <p class="description">Servidores de alto rendimiento con SSL, backups diarios y monitoreo activo
+                        24/7.</p>
+                    <button class="btn-service" data-service="Infraestructura Crítica y Hosting Administrado">
+                        Solicitar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Service 6: Pagos & Crypto -->
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" x2="12" y1="2" y2="22" />
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
                     </div>
-                    <div class="value-card reveal-up delay-3">
-                        <div class="value-icon">🛡️</div>
-                        <h4>Seguridad sin Concesiones</h4>
-                        <p>La protección de tus datos y sistemas es nuestra prioridad absoluta.</p>
-                    </div>
-                    <div class="value-card reveal-up delay-4">
-                        <div class="value-icon">⭐</div>
-                        <h4>Excelencia con Responsabilidad</h4>
-                        <p>Nos comprometemos a entregar trabajo de la más alta calidad, siempre a tiempo.</p>
-                    </div>
+                    <h3>Pagos & Crypto</h3>
+                    <p class="description">Pasarelas de pago tradicionales y criptoactivos (Stablecoins, Bitcoin) para
+                        la economía global.</p>
+                    <button class="btn-service" data-service="Ecosistema de Pagos y Criptoactivos">
+                        Solicitar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section class="team section" id="team">
+
+
+    <!-- ═══════════════ CONTACT ═══════════════ -->
+    <section class="contact section-padding" id="contacto">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Nuestro Equipo</span>
-                <h2 class="section-title">Los Socios</h2>
-                <p class="section-subtitle">Conoce a las personas detrás de Trizor Tech</p>
+            <div class="contact-header">
+                <span class="section-label reveal">Contacto</span>
+                <h2 class="section-title reveal">
+                    ¿Listo para <span class="gradient-text">Transformar</span> tu Negocio?
+                </h2>
+                <p class="section-subtitle reveal">
+                    Cuéntanos sobre tu proyecto. Responderemos en menos de 24 horas.
+                </p>
             </div>
-            <div class="team-intro reveal-up">
-                <img src="tech_collaboration.png" alt="Colaboración del equipo Trizor">
-                <div class="team-intro-content">
-                    <h3>Expertos Comprometidos</h3>
-                    <p>Nuestro equipo está formado por profesionales apasionados por la tecnología y dedicados a
-                        impulsar el éxito de nuestros clientes. Combinamos experiencia técnica con visión empresarial
-                        para ofrecer soluciones que realmente marcan la diferencia.</p>
-                </div>
-            </div>
-            <div class="team-grid">
-                <div class="team-card reveal-up">
-                    <div class="team-photo">
-                        <div class="team-photo-placeholder">👤</div>
-                    </div>
-                    <h4>Socio Fundador</h4>
-                    <p>CEO & Estrategia</p>
-                    <div class="team-social">
-                        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                            </svg></a>
-                    </div>
-                </div>
-                <div class="team-card reveal-up delay-1">
-                    <div class="team-photo">
-                        <div class="team-photo-placeholder">👤</div>
-                    </div>
-                    <h4>Socio Técnico</h4>
-                    <p>CTO & Desarrollo</p>
-                    <div class="team-social">
-                        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                            </svg></a>
-                    </div>
-                </div>
-                <div class="team-card reveal-up delay-2">
-                    <div class="team-photo">
-                        <div class="team-photo-placeholder">👤</div>
-                    </div>
-                    <h4>Socio Comercial</h4>
-                    <p>CFO & Operaciones</p>
-                    <div class="team-social">
-                        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                            </svg></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="contact section" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Contacto</span>
-                <h2 class="section-title">Hablemos de tu Proyecto</h2>
-                <p class="section-subtitle">Estamos listos para ayudarte a crecer</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info reveal-left">
-                    <h3>Información de Contacto</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <span>Correo Electrónico</span>
-                            <a href="mailto:trizor.tech@gmail.com">trizor.tech@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <div>
-                            <span>WhatsApp</span>
-                            <a href="https://wa.me/59170000000" target="_blank">+591 70 000 000</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <span>Ubicación</span>
-                            <p>Av. América entre Av. Santa Cruz<br>Cochabamba, Bolivia</p>
-                        </div>
-                    </div>
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper reveal-left">
+                    <h3>Envíanos un Mensaje</h3>
+                    <p>Completa el formulario y elige cómo quieres contactarnos.</p>
 
-                    <div class="social-section">
-                        <h4>Síguenos en Redes Sociales</h4>
-                        <div class="social-links">
-                            <a href="https://www.tiktok.com/@trizortech?is_from_webapp=1&sender_device=pc"
-                                target="_blank" rel="noopener" class="social-link tiktok" aria-label="TikTok">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
-                                </svg>
-                            </a>
-                            <a href="https://www.instagram.com/trizor.tech/" target="_blank" rel="noopener"
-                                class="social-link instagram" aria-label="Instagram">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                                </svg>
-                            </a>
-                            <a href="https://www.facebook.com/profile.php?id=61586930634114" target="_blank"
-                                rel="noopener" class="social-link facebook" aria-label="Facebook">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                                </svg>
-                            </a>
-                            <a href="https://x.com/TRIZOR_Tech" target="_blank" rel="noopener"
-                                class="social-link twitter" aria-label="X (Twitter)">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                                </svg>
-                            </a>
+                    <form id="contact-form" onsubmit="return false;">
+                        <!-- Honeypot anti-spam (hidden) -->
+                        <div style="position:absolute;left:-9999px;" aria-hidden="true">
+                            <input type="text" name="website" tabindex="-1" autocomplete="off">
                         </div>
-                    </div>
-                </div>
 
-                <div class="contact-form-wrapper reveal-right">
-                    <!-- Formspree Form - Los mensajes se envían a trizor.tech@gmail.com -->
-                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/xwvvovwg" method="POST">
-                        <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio web Trizor Tech">
-                        <input type="hidden" name="_next" value="#">
-                        <div class="form-group">
-                            <label for="name">Nombre Completo</label>
-                            <input type="text" id="name" name="name" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Nombre *</label>
+                                <input type="text" id="contact-name" name="name" placeholder="Tu nombre completo"
+                                    required maxlength="100">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email *</label>
+                                <input type="email" id="contact-email" name="email" placeholder="tu@email.com" required
+                                    maxlength="150">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Correo Electrónico</label>
-                            <input type="email" id="email" name="email" required>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-phone">Teléfono / WhatsApp *</label>
+                                <input type="tel" id="contact-phone" name="phone" placeholder="+591 12345678" required
+                                    maxlength="20">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-service">Servicio de Interés</label>
+                                <select id="contact-service" name="service">
+                                    <option value="">Selecciona un servicio</option>
+                                    <option value="Landing Pages">Landing Pages de Alta Conversión</option>
+                                    <option value="E-commerce">E-commerce y Tiendas Virtuales</option>
+                                    <option value="Automatización">Automatización de Procesos</option>
+                                    <option value="Inteligencia Artificial">Inteligencia Artificial y Agentes IA
+                                    </option>
+                                    <option value="Hosting VPS">Hosting VPS de Alto Rendimiento</option>
+                                    <option value="Pagos y Crypto">Ecosistema de Pagos y Criptoactivos</option>
+                                </select>
+                            </div>
                         </div>
+
                         <div class="form-group">
-                            <label for="phone">Teléfono</label>
-                            <input type="tel" id="phone" name="phone">
+                            <label for="contact-message">Mensaje *</label>
+                            <textarea id="contact-message" name="message"
+                                placeholder="Cuéntanos sobre tu proyecto o consulta..." required
+                                maxlength="2000"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary btn-submit" id="btn-submit-main"
+                                style="width:100%;justify-content:center;padding:16px 28px;font-size:1rem;background:#25d366;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                                </svg>
+                                Enviar por WhatsApp
+                            </button>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-full">Enviar Mensaje</button>
                     </form>
-                    <p class="form-note"
-                        style="text-align: center; margin-top: 1rem; font-size: 0.875rem; color: #6B7280;">
-                        También puedes contactarnos directamente por <a href="https://wa.me/59170000000"
-                            style="color: #00A8E8;">WhatsApp</a>
-                    </p>
+                </div>
+
+                <!-- Contact Info + Map -->
+                <div class="contact-info reveal-right">
+
+                    <div class="contact-info-card">
+                        <div class="icon">📍</div>
+                        <div>
+                            <h4>Ubicación</h4>
+                            <p>Próximamente — Bolivia</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="icon">🕐</div>
+                        <div>
+                            <h4>Horario de Atención</h4>
+                            <p>Lun - Vie: 9:00 - 18:00 (GMT-4)</p>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps -->
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244468.03561740908!2d-68.18969404999999!3d-16.495473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915edf0a04f5a40f%3A0x57dbfc76b4458ab3!2sLa%20Paz%2C%20Bolivia!5e0!3m2!1ses!2sbo!4v1"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Ubicación de IZZY Corporation">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="map-section" id="location">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Ubicación</span>
-                <h2 class="section-title">Encuéntranos</h2>
-                <p class="section-subtitle">Av. América entre Av. Santa Cruz, Cochabamba, Bolivia</p>
-            </div>
-            <div class="map-container reveal-up">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.6841387244!2d-66.15687!3d-17.38333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e373f8c1e1c1e1%3A0x1e1e1e1e1e1e1e1e!2sAv.%20Am%C3%A9rica%2C%20Cochabamba%2C%20Bolivia!5e0!3m2!1ses!2sbo!4v1699999999999!5m2!1ses!2sbo"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- ═══════════════ FOOTER ═══════════════ -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="logo.png" alt="Trizor Tech" class="footer-logo">
-                    <p>Tu socio tecnológico de confianza en Bolivia. Impulsamos el crecimiento de tu empresa con
-                        soluciones innovadoras.</p>
-                    <div class="footer-social">
-                        <a href="https://www.tiktok.com/@trizortech?is_from_webapp=1&sender_device=pc" target="_blank"
-                            rel="noopener" aria-label="TikTok">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
-                            </svg>
+                    <a href="#hero" class="nav-logo">
+                        <img src="logo.png" alt="IZZY Corporation" width="40" height="40">
+                        <span>IZZY Corporation</span>
+                    </a>
+                    <p>
+                        Diseñamos y orquestamos infraestructuras de inteligencia artificial,
+                        automatizaciones avanzadas y experiencias web inmersivas.
+                    </p>
+                    <div class="social-links" style="margin-top:20px;">
+                        <a href="https://x.com/IZZYCorporation" class="social-link" aria-label="X (Twitter)"
+                            target="_blank" rel="noopener">
+                            𝕏
                         </a>
-                        <a href="https://www.instagram.com/trizor.tech/" target="_blank" rel="noopener"
-                            aria-label="Instagram">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                            </svg>
-                        </a>
-                        <a href="https://www.facebook.com/profile.php?id=61586930634114" target="_blank" rel="noopener"
-                            aria-label="Facebook">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
+                        <a href="https://www.facebook.com/profile.php?id=61588488814288" class="social-link"
+                            aria-label="Facebook" target="_blank" rel="noopener">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                 <path
                                     d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                             </svg>
                         </a>
-                        <a href="https://x.com/TRIZOR_Tech" target="_blank" rel="noopener" aria-label="X (Twitter)">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
+                        <a href="https://www.instagram.com/izzycorporation/" class="social-link" aria-label="Instagram"
+                            target="_blank" rel="noopener">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                 <path
-                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/59168490383" class="social-link" aria-label="WhatsApp" target="_blank"
+                            rel="noopener">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@izzycorp" class="social-link" aria-label="TikTok"
+                            target="_blank" rel="noopener">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.52a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.46V13a8.28 8.28 0 005.58 2.17V11.7a4.83 4.83 0 01-3.77-1.24V6.69h3.77z" />
                             </svg>
                         </a>
                     </div>
                 </div>
-                <div class="footer-links">
-                    <h4>Enlaces Rápidos</h4>
-                    <ul>
-                        <li><a href="#hero">Inicio</a></li>
-                        <li><a href="#about">Quiénes Somos</a></li>
-                        <li><a href="#services">Servicios</a></li>
-                        <li><a href="#mission">Misión y Visión</a></li>
-                        <li><a href="#team">Equipo</a></li>
-                        <li><a href="#contact">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
+
+                <div class="footer-col">
                     <h4>Servicios</h4>
-                    <ul>
-                        <li><a href="#services">Software a Medida</a></li>
-                        <li><a href="#services">Automatización</a></li>
-                        <li><a href="#services">Soluciones Fintech</a></li>
-                        <li><a href="#services">Infraestructura Cloud</a></li>
-                        <li><a href="#services">Ciberseguridad</a></li>
-                        <li><a href="#services">Consultoría IT</a></li>
-                    </ul>
+                    <a href="#servicios">Landing Pages</a>
+                    <a href="#servicios">E-commerce</a>
+                    <a href="#servicios">Automatización</a>
+                    <a href="#servicios">Inteligencia Artificial</a>
+                    <a href="#servicios">Hosting VPS</a>
+                    <a href="#servicios">Pagos & Crypto</a>
                 </div>
-                <div class="footer-contact">
+
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <a href="#mision">Misión</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+
+                <div class="footer-col">
                     <h4>Contacto</h4>
-                    <p>📧 <a href="mailto:trizor.tech@gmail.com">trizor.tech@gmail.com</a></p>
-                    <p>📱 <a href="https://wa.me/59170000000">+591 70 000 000</a></p>
-                    <p>📍 Av. América entre Av. Santa Cruz, Cochabamba, Bolivia</p>
+                    <a href="mailto:izzycorporation.sa@gmail.com">izzycorporation.sa@gmail.com</a>
+                    <a href="https://wa.me/59168490383" target="_blank">WhatsApp: +591 68490383</a>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2026 Trizor Tech. Todos los derechos reservados.</p>
+                <p>© 2026 IZZY Corporation. Todos los derechos reservados.</p>
+                <div style="font-size: 0.8em; opacity: 0.6; margin-top: 10px;">
+                    <p>Hecho con 💚 por IZZY Corp</p>
+                    <p style="margin-top: 5px;">(Buscados también como Easy Corporation)</p>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- ═══════════════ CONTACT MODAL ═══════════════ -->
+    <div class="modal-overlay" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal">
+            <button class="modal-close" id="modal-close" aria-label="Cerrar">&times;</button>
+            <h3 id="modal-title">Contáctanos</h3>
+            <p class="modal-service">Servicio: <span id="modal-service-name">—</span></p>
+
+            <form id="modal-form" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="modal-name">Nombre *</label>
+                    <input type="text" id="modal-name" name="name" placeholder="Tu nombre" required maxlength="100">
+                </div>
+                <div class="form-group">
+                    <label for="modal-phone">Teléfono / WhatsApp *</label>
+                    <input type="tel" id="modal-phone" name="phone" placeholder="+591 12345678" required maxlength="20">
+                </div>
+                <div class="form-group">
+                    <label for="modal-email">Email</label>
+                    <input type="email" id="modal-email" name="email" placeholder="tu@email.com" maxlength="150">
+                </div>
+                <div class="form-group">
+                    <label for="modal-message">Mensaje *</label>
+                    <textarea id="modal-message" name="message" placeholder="¿En qué podemos ayudarte?" required
+                        maxlength="2000"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary btn-submit" id="btn-submit-modal"
+                        style="width:100%;justify-content:center;padding:14px 28px;background:#25d366;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                        Enviar por WhatsApp
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+    <!-- Script -->
     <script src="script.js"></script>
 </body>
 
