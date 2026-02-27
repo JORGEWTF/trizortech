@@ -33,3 +33,6 @@ npm-debug.log*
 .env
 .env.local
 .env.*
+izzybot/node_modules/
+izzybot/credentials.json
+izzybot/token.json
