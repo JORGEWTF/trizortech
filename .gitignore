@@ -8,12 +8,6 @@
 .LSOverride
 
 # ──────────────────────────────────────────
-# izzybot — WhatsApp bot (separate project)
-# Contains sensitive credentials & secrets
-# ──────────────────────────────────────────
-izzybot/
-
-# ──────────────────────────────────────────
 # Dev-only conversion scripts (not needed in the deployed site)
 # ──────────────────────────────────────────
 convert_sharp.js

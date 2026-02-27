@@ -1,0 +1,25 @@
+# ══════════════════════════════════════════
+# izzybot — .gitignore
+# Protege archivos sensibles y temporales
+# ══════════════════════════════════════════
+
+# ── Secretos / Credenciales (NUNCA subir a GitHub) ──
+.env
+credentials.json
+token.json
+
+# ── Sesión de WhatsApp Web (datos privados) ──
+.wwebjs_auth/
+.wwebjs_cache/
+
+# ── Dependencias Node.js (se reinstalan con npm install) ──
+node_modules/
+npm-debug.log*
+
+# ── Archivos de test / temporales ──
+test_gemini.js
+test_gemini_2.js
+test_models.js
+
+# ── macOS ──
+.DS_Store
